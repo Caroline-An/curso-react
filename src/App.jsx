@@ -39,6 +39,7 @@ function App() {
   }
 
   function onDeleteTaskClick(taskId) {
+    //QUANDO O BOTÃO (Tasks.jsx) É CLICADO, ELE CHAMA ESSA FUNÇÃO PASSANDO O ID COMO PARÂMETRO, DAÍ A FUNÇÃO VAI FILTRAR AS ATIVIDADES QUE TENHAM ID DIFERENTE DAQUELE QUE FOI CLICADO
     const newTasks = tasks.filter((task) => task.id != taskId);
     setTask(newTasks);
   }
