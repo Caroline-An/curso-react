@@ -5,7 +5,7 @@ function App() {
   return (
     //dentro dos returns só pode entrar uma div por vez
     <div>
-      <h1>Gerenciador de Tarefas</h1>
+      <h1 className="text-red-500">Gerenciador de Tarefas</h1>
       <AddTask />
       <Tasks />
     </div>
