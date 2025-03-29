@@ -3,6 +3,7 @@ import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
 
 function App() {
+  //usamos o State quando ao alterar a variável precisamos alterar a interface também
   const [tasks, setTask] = useState([
     {
       id: 1,
@@ -31,8 +32,8 @@ function App() {
         <h1 className="text-3xl text-slate-100 font-bold font-sans">
           Gerenciador de Tarefas
         </h1>
-        <Tasks tasks={tasks} />
         <AddTask />
+        <Tasks tasks={tasks} />
       </div>
     </div>
   );
