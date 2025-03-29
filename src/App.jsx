@@ -31,8 +31,8 @@ function App() {
         <h1 className="text-3xl text-slate-100 font-bold font-sans">
           Gerenciador de Tarefas
         </h1>
+        <Tasks tasks={tasks} />
         <AddTask />
-        <Tasks />
       </div>
     </div>
   );
