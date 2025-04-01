@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
+import { v4 } from "uuid";
 
 function App() {
   //usamos o State quando ao alterar a variável precisamos alterar a interface também
@@ -46,7 +47,7 @@ function App() {
 
   function onAddTaskSubmit(title, description) {
     const newTask = {
-      id: tasks.length + 1,
+      id: v4, //v4 cria um id aleatório
       text: title,
       description: description,
       isCompleted: false,

@@ -1,4 +1,3 @@
-//1,15,49
 import { useState } from "react";
 
 function AddTask({ onAddTaskSubmit }) {
@@ -22,7 +21,15 @@ function AddTask({ onAddTaskSubmit }) {
         onChange={(event) => setDescription(event.target.value)}
       />
       <button
-        onClick={() => onAddTaskSubmit(title, description)}
+        onClick={() => {
+          //verificar se estão preenchidos
+          if (!title.trim() || !description.trim()) {
+            return alert("Preencha os campos em branco.");
+          }
+          onAddTaskSubmit(title, description);
+          setTitle("");
+          setDescription("");
+        }}
         className="bg-slate-500 text-white px-4 py-2 rounded-md font-medium"
       >
         Adicionar
