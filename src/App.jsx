@@ -9,20 +9,20 @@ function App() {
     {
       id: 1,
       text: "Estudar programação",
-      day: "15 de julho às 10:00",
-      reminder: true,
+      description: "15 de julho às 10:00",
+      isCompleted: false,
     },
     {
       id: 2,
       text: "Estudar matemática",
-      day: "16 de julho às 10:00",
-      reminder: true,
+      description: "16 de julho às 10:00",
+      isCompleted: false,
     },
     {
       id: 3,
       text: "Estudar português",
-      day: "17 de julho às 10:00",
-      reminder: true,
+      description: "17 de julho às 10:00",
+      isCompleted: false,
     },
   ]);
 
