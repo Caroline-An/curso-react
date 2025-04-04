@@ -8,19 +8,19 @@ function App() {
   const [tasks, setTask] = useState([
     {
       id: 1,
-      text: "Estudar programação",
+      title: "Estudar programação",
       description: "15 de julho às 10:00",
       isCompleted: false,
     },
     {
       id: 2,
-      text: "Estudar matemática",
+      title: "Estudar matemática",
       description: "16 de julho às 10:00",
       isCompleted: false,
     },
     {
       id: 3,
-      text: "Estudar português",
+      title: "Estudar português",
       description: "17 de julho às 10:00",
       isCompleted: false,
     },
@@ -48,7 +48,7 @@ function App() {
   function onAddTaskSubmit(title, description) {
     const newTask = {
       id: v4, //v4 cria um id aleatório
-      text: title,
+      title: title,
       description: description,
       isCompleted: false,
     };
