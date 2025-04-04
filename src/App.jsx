@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
 import { v4 } from "uuid";
+import Title from "./components/Title";
 
 function App() {
   //usamos o State quando ao alterar a variável precisamos alterar a interface também
@@ -53,8 +54,8 @@ function App() {
       //PERSISTIR OS DADOS NO STATE
       setTask(data);
     };
-    //FAZ REALMENTE FUNCIONAR
-    fetchTasks();
+    //FAZ REALMENTE FUNCIONAR, porém não vou usar agora
+    //fetchTasks();
   }, []);
 
   function onTaskClick(taskId) {
@@ -90,9 +91,7 @@ function App() {
     //dentro dos returns só pode entrar uma div por vez
     <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
       <div className="w-[500px] space-y-4">
-        <h1 className="text-3xl text-slate-100 font-bold font-sans text-center">
-          Gerenciador de Tarefas
-        </h1>
+        <Title>Gerenciador de Tarefas</Title>
         <AddTask onAddTaskSubmit={onAddTaskSubmit} />
         <Tasks
           tasks={tasks}
