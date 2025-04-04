@@ -46,13 +46,15 @@ function App() {
         }
       );
 
+      //PEGAR OS DADOS RETORNADOS E CONVERTER PARA JSON
       const data = await response.json();
       console.log(data);
 
-      //PEGAR OS DADOS RETORNADOS E CONVERTER PARA JSON
-
       //PERSISTIR OS DADOS NO STATE
+      setTask(data);
     };
+    //FAZ REALMENTE FUNCIONAR
+    fetchTasks();
   }, []);
 
   function onTaskClick(taskId) {
