@@ -35,6 +35,26 @@ function App() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
+  //a lista [] vazia indica q a função só é executada uma vez, qnd o user acessar pela primeira vez a aplicaçãoo
+  useEffect(() => {
+    const fetchTasks = async () => {
+      //CHAMAR A API
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/todos?_limit=10",
+        {
+          method: "GET",
+        }
+      );
+
+      const data = await response.json();
+      console.log(data);
+
+      //PEGAR OS DADOS RETORNADOS E CONVERTER PARA JSON
+
+      //PERSISTIR OS DADOS NO STATE
+    };
+  }, []);
+
   function onTaskClick(taskId) {
     const newTasks = tasks.map((task) => {
       //PRECISO ATUALIZAR ESSA TAREFA
